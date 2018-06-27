@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060AA5DFADEEAD2096F74D6B /* Pods_FormBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4B4135DF3EBAE3121148E9 /* Pods_FormBuilder.framework */; };
 		7B715F1F20E37BC600DB381E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B715F1E20E37BC600DB381E /* AppDelegate.swift */; };
 		7B715F2120E37BC600DB381E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B715F2020E37BC600DB381E /* ViewController.swift */; };
 		7B715F2420E37BC600DB381E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B715F2220E37BC600DB381E /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B4B4135DF3EBAE3121148E9 /* Pods_FormBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B715F1B20E37BC600DB381E /* FormBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B715F1E20E37BC600DB381E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B715F2020E37BC600DB381E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		7B715F2520E37BC700DB381E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B715F2820E37BC700DB381E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B715F2A20E37BC700DB381E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		986D4E1C2C1866679D24C19A /* Pods-FormBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormBuilder/Pods-FormBuilder.debug.xcconfig"; sourceTree = "<group>"; };
+		C4542F00FE595255D169EFBB /* Pods-FormBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormBuilder/Pods-FormBuilder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060AA5DFADEEAD2096F74D6B /* Pods_FormBuilder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				7B715F1D20E37BC600DB381E /* FormBuilder */,
 				7B715F1C20E37BC600DB381E /* Products */,
+				87EEC1028A7DB224EBCDF7D7 /* Pods */,
+				90D0F9A6054B95FFF4372EDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = FormBuilder;
 			sourceTree = "<group>";
 		};
+		87EEC1028A7DB224EBCDF7D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				986D4E1C2C1866679D24C19A /* Pods-FormBuilder.debug.xcconfig */,
+				C4542F00FE595255D169EFBB /* Pods-FormBuilder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90D0F9A6054B95FFF4372EDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B4B4135DF3EBAE3121148E9 /* Pods_FormBuilder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B715F2D20E37BC700DB381E /* Build configuration list for PBXNativeTarget "FormBuilder" */;
 			buildPhases = (
+				09FA7FE0C7EB4F34C45DE5D7 /* [CP] Check Pods Manifest.lock */,
 				7B715F1720E37BC600DB381E /* Sources */,
 				7B715F1820E37BC600DB381E /* Frameworks */,
 				7B715F1920E37BC600DB381E /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09FA7FE0C7EB4F34C45DE5D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FormBuilder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B715F1720E37BC600DB381E /* Sources */ = {
@@ -278,6 +324,7 @@
 		};
 		7B715F2E20E37BC700DB381E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 986D4E1C2C1866679D24C19A /* Pods-FormBuilder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +343,7 @@
 		};
 		7B715F2F20E37BC700DB381E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4542F00FE595255D169EFBB /* Pods-FormBuilder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_FormBuilder {
+  umbrella header "Pods-FormBuilder-umbrella.h"
+
+  export *
+  module * { export * }
+}
