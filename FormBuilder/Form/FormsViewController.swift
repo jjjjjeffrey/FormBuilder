@@ -1,14 +1,14 @@
 //
-//  DetailViewController.swift
+//  FormsViewController.swift
 //  FormBuilder
 //
-//  Created by zengdaqian on 2018/6/27.
+//  Created by zengdaqian on 2018/7/5.
 //  Copyright © 2018年 zengdaqian. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class FormsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

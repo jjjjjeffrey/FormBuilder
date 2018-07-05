@@ -71,7 +71,7 @@ extension AppDelegate: UISplitViewControllerDelegate {
     
     func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
         let nvc = master.selectedViewController as! UINavigationController
-        if nvc.viewControllers.count > 1 {
+        if nvc.viewControllers.count > 1, nvc.viewControllers.last is DetailViewController {
             let top = nvc.viewControllers.last
             nvc.popViewController(animated: true)
             return top
