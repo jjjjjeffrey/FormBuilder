@@ -12,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var master: UITabBarController!
+    var secondary: UIViewController!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if let spvc = window?.rootViewController as? UISplitViewController {
+            spvc.delegate = self
+            master = spvc.viewControllers[0] as! UITabBarController
+            secondary = spvc.viewControllers[1]
+        }
         return true
     }
 
@@ -42,5 +48,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate: UISplitViewControllerDelegate {
+    func primaryViewController(forCollapsing splitViewController: UISplitViewController) -> UIViewController? {
+        return master
+    }
+    
+    func primaryViewController(forExpanding splitViewController: UISplitViewController) -> UIViewController? {
+        return master
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        if secondaryViewController is SecondaryViewController {
+            return false
+        } else {
+            let nvc = master.selectedViewController as! UINavigationController
+            nvc.pushViewController(secondaryViewController, animated: true)
+            return true
+        }
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
+        let nvc = master.selectedViewController as! UINavigationController
+        if nvc.viewControllers.count > 1 {
+            let top = nvc.viewControllers.last
+            nvc.popViewController(animated: true)
+            return top
+        } else {
+            return secondary
+        }
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {
+        guard splitViewController.isCollapsed else { return false }
+        guard let selected = master.selectedViewController as? UINavigationController else { return false }
+        let controller: UIViewController
+        if let navigation = vc as? UINavigationController {
+            controller = navigation.topViewController!
+        } else {
+            controller = vc
+        }
+        controller.hidesBottomBarWhenPushed = true
+        selected.pushViewController(controller, animated: true)
+        return true
+    }
 }
 
