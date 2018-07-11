@@ -21,6 +21,8 @@
 		7BCBC5C420EDA56E00901CF4 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBC5C320EDA56E00901CF4 /* MineViewController.swift */; };
 		7BCBC5C720EDA58D00901CF4 /* FormsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBC5C620EDA58D00901CF4 /* FormsViewController.swift */; };
 		7BCBC5CA20EDA6F600901CF4 /* DetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBC5C920EDA6F600901CF4 /* DetailViewControllerProtocol.swift */; };
+		F69188FC20F47D21000915C6 /* CreateFormTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */; };
+		F69188FE20F5A645000915C6 /* StoryBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		7BCBC5C920EDA6F600901CF4 /* DetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerProtocol.swift; sourceTree = "<group>"; };
 		986D4E1C2C1866679D24C19A /* Pods-FormBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormBuilder/Pods-FormBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 		C4542F00FE595255D169EFBB /* Pods-FormBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormBuilder/Pods-FormBuilder.release.xcconfig"; sourceTree = "<group>"; };
+		F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFormTemplateViewController.swift; sourceTree = "<group>"; };
+		F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +84,11 @@
 				7B715F1E20E37BC600DB381E /* AppDelegate.swift */,
 				7B715F2020E37BC600DB381E /* ViewController.swift */,
 				7BCBC5C920EDA6F600901CF4 /* DetailViewControllerProtocol.swift */,
+				7B715F3420E39A9600DB381E /* SecondaryViewController.swift */,
+				F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */,
 				7BCBC5C220EDA54700901CF4 /* Template */,
 				7BCBC5C520EDA57400901CF4 /* Mine */,
 				7BCBC5C820EDA59300901CF4 /* Form */,
-				7B715F3420E39A9600DB381E /* SecondaryViewController.swift */,
 				7B715F2220E37BC600DB381E /* Main.storyboard */,
 				7B715F2520E37BC700DB381E /* Assets.xcassets */,
 				7B715F2720E37BC700DB381E /* LaunchScreen.storyboard */,
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				7BCBC5C020EDA53D00901CF4 /* TemplatesViewController.swift */,
+				F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */,
 				7BCBC5BE20EDA50200901CF4 /* Template.storyboard */,
 			);
 			path = Template;
@@ -147,6 +153,7 @@
 				7B715F1720E37BC600DB381E /* Sources */,
 				7B715F1820E37BC600DB381E /* Frameworks */,
 				7B715F1920E37BC600DB381E /* Resources */,
+				F69188FF20F5F462000915C6 /* Increase Bundle Version */,
 			);
 			buildRules = (
 			);
@@ -225,6 +232,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F69188FF20F5F462000915C6 /* Increase Bundle Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increase Bundle Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -236,7 +257,9 @@
 				7B715F2120E37BC600DB381E /* ViewController.swift in Sources */,
 				7B715F3520E39A9600DB381E /* SecondaryViewController.swift in Sources */,
 				7B715F1F20E37BC600DB381E /* AppDelegate.swift in Sources */,
+				F69188FC20F47D21000915C6 /* CreateFormTemplateViewController.swift in Sources */,
 				7BCBC5CA20EDA6F600901CF4 /* DetailViewControllerProtocol.swift in Sources */,
+				F69188FE20F5A645000915C6 /* StoryBoardHelper.swift in Sources */,
 				7BCBC5C120EDA53D00901CF4 /* TemplatesViewController.swift in Sources */,
 				7BCBC5C420EDA56E00901CF4 /* MineViewController.swift in Sources */,
 			);

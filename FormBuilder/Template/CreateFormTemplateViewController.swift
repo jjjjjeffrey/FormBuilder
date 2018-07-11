@@ -1,18 +1,14 @@
 //
-//  RootViewController.swift
+//  CreateFormTemplateViewController.swift
 //  FormBuilder
 //
-//  Created by zengdaqian on 2018/6/27.
+//  Created by daqian zeng on 2018/7/10.
 //  Copyright © 2018年 zengdaqian. All rights reserved.
 //
 
 import UIKit
 
-class SecondaryViewController: UIViewController {
-    
-    static func instance() -> SecondaryViewController {
-        return UIStoryboard.main.instantiateViewController(withIdentifier: .secondary) as! SecondaryViewController
-    }
+class CreateFormTemplateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +31,10 @@ class SecondaryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
-
-fileprivate extension String {
-    static let secondary = "SecondaryViewController"
+    @IBAction func cancleAction(_ sender: Any) {
+        dismiss(animated: true) {
+            
+        }
+    }
+    
 }
