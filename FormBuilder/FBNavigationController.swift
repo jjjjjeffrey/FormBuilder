@@ -1,14 +1,16 @@
 //
-//  TemplatesViewController.swift
+//  FBNavigationController.swift
 //  FormBuilder
 //
-//  Created by zengdaqian on 2018/7/5.
+//  Created by daqian zeng on 2018/7/12.
 //  Copyright © 2018年 zengdaqian. All rights reserved.
 //
 
 import UIKit
 
-class TemplatesViewController: UITableViewController {
+class FBNavigationController: UINavigationController {
+    
+    var sender: NSObject?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +33,5 @@ class TemplatesViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        return cell
-    }
 
 }

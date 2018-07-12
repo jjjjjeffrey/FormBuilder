@@ -81,7 +81,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Ffr-Ed-0Y2">
             <objects>
-                <navigationController id="oEG-ck-ZGl" sceneMemberID="viewController">
+                <navigationController id="oEG-ck-ZGl" customClass="FBNavigationController" customModule="FormBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lF6-8r-imc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

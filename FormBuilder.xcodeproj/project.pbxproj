@@ -11,7 +11,6 @@
 		7B07181520E5FDF4004A3E2A /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B07181420E5FDF4004A3E2A /* Form.storyboard */; };
 		7B07181820E5FFBB004A3E2A /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B07181720E5FFBB004A3E2A /* Mine.storyboard */; };
 		7B715F1F20E37BC600DB381E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B715F1E20E37BC600DB381E /* AppDelegate.swift */; };
-		7B715F2120E37BC600DB381E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B715F2020E37BC600DB381E /* ViewController.swift */; };
 		7B715F2420E37BC600DB381E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B715F2220E37BC600DB381E /* Main.storyboard */; };
 		7B715F2620E37BC700DB381E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B715F2520E37BC700DB381E /* Assets.xcassets */; };
 		7B715F2920E37BC700DB381E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B715F2720E37BC700DB381E /* LaunchScreen.storyboard */; };
@@ -23,6 +22,7 @@
 		7BCBC5CA20EDA6F600901CF4 /* DetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBC5C920EDA6F600901CF4 /* DetailViewControllerProtocol.swift */; };
 		F69188FC20F47D21000915C6 /* CreateFormTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */; };
 		F69188FE20F5A645000915C6 /* StoryBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */; };
+		F691890120F72E17000915C6 /* FBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691890020F72E17000915C6 /* FBNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,6 @@
 		7B07181720E5FFBB004A3E2A /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		7B715F1B20E37BC600DB381E /* FormBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B715F1E20E37BC600DB381E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B715F2020E37BC600DB381E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B715F2320E37BC600DB381E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B715F2520E37BC700DB381E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B715F2820E37BC700DB381E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		C4542F00FE595255D169EFBB /* Pods-FormBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormBuilder/Pods-FormBuilder.release.xcconfig"; sourceTree = "<group>"; };
 		F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFormTemplateViewController.swift; sourceTree = "<group>"; };
 		F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardHelper.swift; sourceTree = "<group>"; };
+		F691890020F72E17000915C6 /* FBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				7B715F1E20E37BC600DB381E /* AppDelegate.swift */,
-				7B715F2020E37BC600DB381E /* ViewController.swift */,
+				F691890020F72E17000915C6 /* FBNavigationController.swift */,
 				7BCBC5C920EDA6F600901CF4 /* DetailViewControllerProtocol.swift */,
 				7B715F3420E39A9600DB381E /* SecondaryViewController.swift */,
 				F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */,
@@ -254,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCBC5C720EDA58D00901CF4 /* FormsViewController.swift in Sources */,
-				7B715F2120E37BC600DB381E /* ViewController.swift in Sources */,
+				F691890120F72E17000915C6 /* FBNavigationController.swift in Sources */,
 				7B715F3520E39A9600DB381E /* SecondaryViewController.swift in Sources */,
 				7B715F1F20E37BC600DB381E /* AppDelegate.swift in Sources */,
 				F69188FC20F47D21000915C6 /* CreateFormTemplateViewController.swift in Sources */,

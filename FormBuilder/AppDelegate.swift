@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var master: UITabBarController!
     var secondary: SecondaryViewController = SecondaryViewController.instance()
+    var secondaryNVCs: [String: FBNavigationController] = [:]
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -68,8 +69,10 @@ extension AppDelegate: UISplitViewControllerDelegate {
         if secondaryViewController is SecondaryViewController {
             return true
         } else {
-            let nvc = splitViewController.primaryViewController as! UINavigationController
-            if let secondaryNvc = secondaryViewController as? UINavigationController {
+            let nvc = splitViewController.primaryViewController as! FBNavigationController
+            if let secondaryNvc = secondaryViewController as? FBNavigationController {
+                let index = master.viewControllers?.index(of: splitViewController)
+                secondaryNVCs["\(index!)"] = secondaryNvc
                 var vcs = nvc.viewControllers
                 vcs.append(contentsOf: secondaryNvc.viewControllers)
                 nvc.setViewControllers(vcs, animated: true)
@@ -83,8 +86,9 @@ extension AppDelegate: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
         if let nvc = primaryViewController as? UINavigationController, nvc.viewControllers.count > 1 {
             let details: [UIViewController] = Array(nvc.viewControllers.dropFirst())
-            let secondNvc = UINavigationController()
-            secondNvc.setViewControllers(details, animated: true)
+            let index = master.viewControllers?.index(of: splitViewController)
+            let secondNvc = secondaryNVCs["\(index!)"]
+            secondNvc?.viewControllers = details
             nvc.viewControllers = [nvc.viewControllers[0]]
             return secondNvc
         } else {
@@ -95,7 +99,12 @@ extension AppDelegate: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {
         
         let detailViewController: UIViewController
-        if let navigation = vc as? UINavigationController {
+        if let navigation = vc as? FBNavigationController {
+            if let object = sender as? NSObject {
+                navigation.sender = object
+            }
+            let index = master.viewControllers?.index(of: splitViewController)
+            secondaryNVCs["\(index!)"] = navigation
             detailViewController = navigation.topViewController!
         } else {
             detailViewController = vc
@@ -107,11 +116,19 @@ extension AppDelegate: UISplitViewControllerDelegate {
             premaryNVC.pushViewController(detailViewController, animated: true)
             return true
         } else {
-            if let secondaryNVC = splitViewController.secondaryViewController as? UINavigationController {
-                secondaryNVC.pushViewController(detailViewController, animated: true)
+            if let secondaryNVC = splitViewController.secondaryViewController as? FBNavigationController {
+                if let object = sender as? NSObject, secondaryNVC.sender === object {
+                    secondaryNVC.popToRootViewController(animated: true)
+                } else {
+                    secondaryNVC.pushViewController(detailViewController, animated: true)
+                }
                 return true
             } else {
-                return false
+                if let secondaryNVC = vc as? FBNavigationController, let object = sender as? NSObject {
+                    secondaryNVC.sender = object
+                }
+                splitViewController.viewControllers[1] = vc
+                return true
             }
         }
         
