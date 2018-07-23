@@ -20,6 +20,8 @@
 		7BCBC5C420EDA56E00901CF4 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBC5C320EDA56E00901CF4 /* MineViewController.swift */; };
 		7BCBC5C720EDA58D00901CF4 /* FormsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBC5C620EDA58D00901CF4 /* FormsViewController.swift */; };
 		7BCBC5CA20EDA6F600901CF4 /* DetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBC5C920EDA6F600901CF4 /* DetailViewControllerProtocol.swift */; };
+		F660233521007BB500DD74BF /* FormControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660233421007BB500DD74BF /* FormControlsViewController.swift */; };
+		F660233821009B1E00DD74BF /* FormSectionEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660233721009B1E00DD74BF /* FormSectionEditViewController.swift */; };
 		F69188FC20F47D21000915C6 /* CreateFormTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */; };
 		F69188FE20F5A645000915C6 /* StoryBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */; };
 		F691890120F72E17000915C6 /* FBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691890020F72E17000915C6 /* FBNavigationController.swift */; };
@@ -43,6 +45,8 @@
 		7BCBC5C920EDA6F600901CF4 /* DetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerProtocol.swift; sourceTree = "<group>"; };
 		986D4E1C2C1866679D24C19A /* Pods-FormBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormBuilder/Pods-FormBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 		C4542F00FE595255D169EFBB /* Pods-FormBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormBuilder/Pods-FormBuilder.release.xcconfig"; sourceTree = "<group>"; };
+		F660233421007BB500DD74BF /* FormControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormControlsViewController.swift; sourceTree = "<group>"; };
+		F660233721009B1E00DD74BF /* FormSectionEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSectionEditViewController.swift; sourceTree = "<group>"; };
 		F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFormTemplateViewController.swift; sourceTree = "<group>"; };
 		F69188FD20F5A645000915C6 /* StoryBoardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardHelper.swift; sourceTree = "<group>"; };
 		F691890020F72E17000915C6 /* FBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBNavigationController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				7BCBC5C020EDA53D00901CF4 /* TemplatesViewController.swift */,
 				F69188FB20F47D21000915C6 /* CreateFormTemplateViewController.swift */,
+				F660233721009B1E00DD74BF /* FormSectionEditViewController.swift */,
+				F660233421007BB500DD74BF /* FormControlsViewController.swift */,
 				7BCBC5BE20EDA50200901CF4 /* Template.storyboard */,
 			);
 			path = Template;
@@ -276,9 +282,11 @@
 				F691890120F72E17000915C6 /* FBNavigationController.swift in Sources */,
 				7B715F3520E39A9600DB381E /* SecondaryViewController.swift in Sources */,
 				7B715F1F20E37BC600DB381E /* AppDelegate.swift in Sources */,
+				F660233521007BB500DD74BF /* FormControlsViewController.swift in Sources */,
 				F69188FC20F47D21000915C6 /* CreateFormTemplateViewController.swift in Sources */,
 				7BCBC5CA20EDA6F600901CF4 /* DetailViewControllerProtocol.swift in Sources */,
 				F69188FE20F5A645000915C6 /* StoryBoardHelper.swift in Sources */,
+				F660233821009B1E00DD74BF /* FormSectionEditViewController.swift in Sources */,
 				7BCBC5C120EDA53D00901CF4 /* TemplatesViewController.swift in Sources */,
 				7BCBC5C420EDA56E00901CF4 /* MineViewController.swift in Sources */,
 			);

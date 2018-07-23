@@ -11,7 +11,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow? {
+        didSet {
+            window?.backgroundColor = .white
+        }
+    }
     var master: UITabBarController!
     var secondary: SecondaryViewController = SecondaryViewController.instance()
     var secondaryNVCs: [String: FBNavigationController] = [:]

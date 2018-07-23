@@ -11,5 +11,5 @@ import UIKit
 
 protocol DetailViewController where Self: UIViewController {}
 
-extension CreateFormTemplateViewController: DetailViewController {}
+extension _CreateFormTemplateViewController: DetailViewController {}
 
